@@ -7,20 +7,22 @@ if (process.env.NODE_ENV === "development") {
   makeServer({ environment: "development" });
 }
 
+
 function App() {
   const [employees, setEmployees] = useState([])
    useEffect(() => {
-     async function fetchEmployees() {
-       try {
-         const response = makeServer()
-         console.log(response.environment, "👹")
-         setEmployees(response.seeds)
-       } catch(err) {
-         console.log(`${err} 👾`)
-       }
-     }
-     fetchEmployees()
+     fetch("api/employees")
+        .then((respsonse) => respsonse.json())
+        .then((json) => setEmployees(json))
+      //  try {
+      //    const response = makeServer()
+      //    console.log(response.schema.employees.all(), "👹")
+      //    setEmployees(response.schema.employees.all())
+      //  } catch(err) {
+      //    console.log(`${err} 👾`)
+      //  }
    }, [])
+   console.log(employees, "🦋")
   return (
     <div>
       <header>
@@ -32,3 +34,5 @@ function App() {
 }
 
 export default App;
+
+//response.schema.environment
