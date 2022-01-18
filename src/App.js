@@ -14,21 +14,24 @@ function App() {
      fetch("api/employees")
         .then((respsonse) => respsonse.json())
         .then((json) => setEmployees(json))
-      //  try {
-      //    const response = makeServer()
-      //    console.log(response.schema.employees.all(), "👹")
-      //    setEmployees(response.schema.employees.all())
-      //  } catch(err) {
-      //    console.log(`${err} 👾`)
-      //  }
    }, [])
    console.log(employees, "🦋")
+   const employeeList = employees.map((employeeData, index) => {
+     return(
+       <li key = {index}>
+          {employeeData.firstName}, {employeeData.lastName}
+       </li>
+     )
+   })
   return (
     <div>
       <header>
         <h1>Employees</h1>
+        <ul>
+          <li>{employeeList}</li>
+        </ul>
       </header>
-      <Employees  info={employees}/>
+      <Employees  employees={employees}/>
     </div>
   );
 }
