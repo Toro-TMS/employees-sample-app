@@ -1,5 +1,5 @@
 import { makeServer } from "./server";
-//import { useEffect } from "react";
+//import { useEffect, useState } from "react";
 import Employees from "./components/Employees";
 import { useState, useEffect } from "react/cjs/react.development";
 
@@ -14,22 +14,14 @@ function App() {
      fetch("api/employees")
         .then((respsonse) => respsonse.json())
         .then((json) => setEmployees(json))
+        .catch((error) => {console.log(error)})
    }, [])
    console.log(employees, "🦋")
-   const employeeList = employees.map((employeeData, index) => {
-     return(
-       <li key = {index}>
-          {employeeData.firstName}, {employeeData.lastName}
-       </li>
-     )
-   })
+   
   return (
     <div>
       <header>
         <h1>Employees</h1>
-        <ul>
-          <li>{employeeList}</li>
-        </ul>
       </header>
       <Employees  employees={employees}/>
     </div>
@@ -37,5 +29,5 @@ function App() {
 }
 
 export default App;
-
+//
 //response.schema.environment

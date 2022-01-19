@@ -1,9 +1,20 @@
 
 export default function Employees(props) {
     console.log(props, "🐼")
+    const employeeList = props.employees.map((employeeData, index) => {
+        return(
+          <li key = {index}>
+             {employeeData.firstName}, {employeeData.lastName}
+          </li>
+        )
+      })
     return(
         <div>
-            <p>one Employee:</p>
+        <ul className="list">
+          <li>{employeeList}</li>
+      </ul>
+      
+            
         </div>
     )
 }
