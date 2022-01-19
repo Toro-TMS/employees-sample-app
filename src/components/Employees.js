@@ -2,22 +2,14 @@
 //import { useState, useEffect } from "react/cjs/react.development";
 
 export default function Employees(props) {
-    console.log(props, "🐼")
-    const employeeList = props.employees.map((employeeData, index) => {
-        return(
-          <li key = {index}>
-             {employeeData.firstName}, {employeeData.lastName}
-          </li>
-        )
-      })
+    console.log(props.employees.employees[0], "props.employees.employees  🐼")
+    const employee = props.employees
     return(
         <div>
-        <ul className="list">
-          <li>{employeeList}</li>
-      </ul>
-      
-            
+            <p>one employee</p>
         </div>
     )
 }
-//<Employee employee={employeeList}/>
+//<Employee employee={employee}/>
+//
+//const employee = props.employees
