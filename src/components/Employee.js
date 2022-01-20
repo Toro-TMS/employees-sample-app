@@ -1,4 +1,4 @@
-//import Info from "./Info"
+import Info from "./Info"
 
 export default function Employee(props){
    console.log(props.employee, "👾")
@@ -11,6 +11,7 @@ export default function Employee(props){
                 <div>
                     {employeeData.bio}
                 </div>
+                <Info address={employeeData.address} id={employeeData.id}/>
              </li>
          )
         })
