@@ -1,6 +1,8 @@
 import { useState } from "react"
 
-export default function Delete() {
+// TODO FINISH DELETE FUNCTION
+export default function Delete(props) {
+    console.log(props.id, "❌")
     const [employeeInfo, setEmployeeInfo] = useState([])
     const handleDelete = (e) => {
         //DELETE employees/:id

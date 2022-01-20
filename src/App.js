@@ -1,8 +1,10 @@
 import { makeServer } from "./server";
-//import { useEffect, useState } from "react";
 import Employees from "./components/Employees";
 import { useState, useEffect } from "react/cjs/react.development";
-//import { ReactDOM } from "react";
+// import {
+//   BrowserRouter as Router,
+//   Route,
+// } from 'react-router-dom'
 
 
 if (process.env.NODE_ENV === "development") {
@@ -33,8 +35,8 @@ function App() {
 export default App;
 
 //response.schema.environment
-//<ul>
-// {employees && employees.map((employee) => (
-//   <li key={employee.id}>{employee.firstName} {employee.lastName}</li>
-// ))}
-// </ul>
+//      <Router> 
+//         <Route exact path="/" component={App} />
+//         <Route exact path="/employees" render={() => <Employees  employees={employees}/> } />
+//         <Route path = "/employees/:id" render = {props => {console.log(props)}}/>
+//       </Router> 
