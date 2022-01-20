@@ -5,8 +5,12 @@ export default function Employee(props){
    const employeeList = props.employee?.map((employeeData, index) => {
         return(
             <li key = {index}>
-                {employeeData.firstName}, {employeeData.lastName}
-                
+                <img className="avatar" src={employeeData.avatar} alt={employeeData.firstName} width="200" height="150"/>
+                <b>{employeeData.firstName} {employeeData.lastName}</b> - {employeeData.email}
+                <p>{employeeData.phone} </p>
+                <div>
+                    {employeeData.bio}
+                </div>
              </li>
          )
         })
@@ -16,5 +20,3 @@ export default function Employee(props){
         </div>
     )
 }
-//<Info info={employeeData}/>
-//<li>{employeeList}</li>
