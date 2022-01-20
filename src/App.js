@@ -20,7 +20,7 @@ function App() {
         .then((json) => setEmployees(json))
         .catch((error) => {console.log(error)})
    }, [])
-   console.log(employees, "🦋")
+   //console.log(employees, "🦋")
    
   return (
     <div>

@@ -3,7 +3,7 @@ import Delete from "./Delete"
 
 // TODO create expand button for details div
 export default function Employee(props){
-   console.log(props.employee, "👾")
+   //console.log(props.employee, "👾")
    const employeeList = props.employee?.map((employeeData, index) => {
         return(
             <li key = {index}>
