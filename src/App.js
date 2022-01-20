@@ -14,7 +14,7 @@ function App() {
   const [employees, setEmployees] = useState([])
    useEffect(() => {
      fetch("api/employees")
-        .then((respsonse) => respsonse.json())
+        .then((response) => response.json())
         .then((json) => setEmployees(json))
         .catch((error) => {console.log(error)})
    }, [])

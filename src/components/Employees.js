@@ -2,11 +2,10 @@ import Employee from "./Employee"
 //import { useState, useEffect } from "react/cjs/react.development";
 
 export default function Employees(props) {
-    console.log(props.employees.employees, "props.employees.employees  🐼")
-    const employee = props.employees
+    console.log(props.employees.employees, "props.employees  🐼")
+    const employee = props.employees.employees
     return(
         <div>
-            <p>one employee</p>
             <Employee employee={employee}/>
         </div>
     )
