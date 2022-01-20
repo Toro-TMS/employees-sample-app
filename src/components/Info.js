@@ -7,8 +7,7 @@ import styled from "styled-components"
 export default function Info(props) {
     //console.log(props.address, "🦑")
     const displayDetail = () => {
-        const display = document.getElementById(`${props.employeeId}`)
-        display.style.visibility = "hidden" ? display.style.visibility="visible":display.style.visibility = "hidden"
+        document.getElementById(`${props.employeeId}`).style.visibility = "visible";
     }
     const closeDetail= () => {
         document.getElementById(`${props.employeeId}`).style.visibility = "hidden";
