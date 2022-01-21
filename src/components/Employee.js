@@ -5,17 +5,19 @@ import Delete from "./Delete"
 
 
 
-// TODO create expand button for details div
+
 export default function Employee(props){
    //console.log(props.employee, "👾")
-   
+   const displayDetail = () => {
+      let collapse = document.querySelectorAll(".details")
+      for (let i = 0; i< collapse.length; i++){
+          collapse[i].style.visibility = "visible"
+      }
+   }
 
    const employeeList = props.employee?.map((employeeData, index) => {
-    // const remove = () => {
-    //     document.getElementsById(`${employeeData.id}`).style.visibility = "hidden";
-    //  }
         return(
-            <li key = {index} id={employeeData.id}>
+            <li key = {index}>
                 <img className="avatar" src={employeeData.avatar} alt={employeeData.firstName} width="200" height="150"/>
                 <b>{employeeData.firstName} {employeeData.lastName}</b> - {employeeData.email} 
                 <Delete employeeId={employeeData.id} />
@@ -27,12 +29,11 @@ export default function Employee(props){
     
         return(
             <div>
+                <button onClick={displayDetail}>View all info </button>
         {employeeList}  
         </div>
     )
 }
 
-//<Display onClick={displayAll}>View All Details </Display>
-//const Display = styled.button`
-//        font-size: 1rem;
-//`
+
+//id={employeeData.id}

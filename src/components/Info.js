@@ -1,9 +1,6 @@
-//import React, {useState} from "react";
+
 import styled from "styled-components"
 
-// const Transition = React.forwardRef(function Transition(props, ref) {
-//     return <Slide direction="down" ref={ref} {...props} />;
-//   });
 export default function Info(props) {
     //console.log(props.address, "🦑")
     const displayDetail = () => {

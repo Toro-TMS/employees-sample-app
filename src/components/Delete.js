@@ -1,10 +1,9 @@
 //import { useState } from "react"
 import { Button } from "@material-ui/core"
 
-// TODO FINISH DELETE FUNCTION
+// DELETES employee on the back end, needs to be reflected/page refresh on the front end
 export default function Delete(props) {
     console.log(props, "❌")
-
     //const [employeeInfo, setEmployeeInfo] = useState([])
     const handleDelete = (e) => {
         fetch(`api/employees/${props.employeeId}`, {method: 'DELETE'})
