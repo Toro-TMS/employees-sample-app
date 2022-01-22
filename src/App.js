@@ -1,10 +1,7 @@
 import { makeServer } from "./server";
 import Employees from "./components/Employees";
-import { useState, useEffect } from "react/cjs/react.development";
-// import {
-//   BrowserRouter as Router,
-//   Route,
-// } from 'react-router-dom'
+//import { useState, useEffect } from "react/cjs/react.development";
+import { useState, useEffect } from "react";
 
 
 if (process.env.NODE_ENV === "development") {
@@ -34,7 +31,7 @@ function App() {
 
 export default App;
 
-//response.schema.environment
+
 //      <Router> 
 //         <Route exact path="/" component={App} />
 //         <Route exact path="/employees" render={() => <Employees  employees={employees}/> } />

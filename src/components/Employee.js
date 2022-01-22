@@ -1,13 +1,14 @@
 import Info from "./Info"
 import Delete from "./Delete"
-//import React, { useState } from "react"
+//import { useState } from "react"
 //import styled from "styled-components"
-
+import Edit from "./Edit"
 
 
 
 export default function Employee(props){
    //console.log(props.employee, "👾")
+   
    const displayDetail = () => {
       let collapse = document.querySelectorAll(".details")
       for (let i = 0; i< collapse.length; i++){
@@ -18,11 +19,11 @@ export default function Employee(props){
    const employeeList = props.employee?.map((employeeData, index) => {
         return(
             <li key = {index}>
-                <img className="avatar" src={employeeData.avatar} alt={employeeData.firstName} width="200" height="150"/>
+                <img className="avatar" src={employeeData.avatar} alt={employeeData.firstName} width="200" height="150"/> 
                 <b>{employeeData.firstName} {employeeData.lastName}</b> - {employeeData.email} 
+                <Edit data={employeeData} />
                 <Delete employeeId={employeeData.id} />
                 <Info address={employeeData.address} employeeId={employeeData.id} phone={employeeData.phone} bio={employeeData.bio}/>
-                
              </li>
          )
         })

@@ -1,4 +1,4 @@
-
+import { Button } from "@material-ui/core"
 import styled from "styled-components"
 
 export default function Info(props) {
@@ -11,9 +11,9 @@ export default function Info(props) {
     }
     return(
         <div>
-            <DetailsIcon onClick={displayDetail}> ⬇️ </DetailsIcon>
+            <Button onClick={displayDetail}> ⬇️ </Button>
             <DetailsDiv id={props.employeeId} className="details">
-            <button onClick={closeDetail}> ⓧ </button>
+            <Button onClick={closeDetail}> ⓧ </Button>
             <ul>
            <li> {props.address.streetAddress} -  {props.address.city}, {props.address.state} {props.address.zipCode} </li>
             <li>{props.phone}</li>
@@ -23,11 +23,6 @@ export default function Info(props) {
         </div>
     )
 }
-//<ExitDetail onClick={closeDetail}> ⓧ </ExitDetail>
-const DetailsIcon = styled.button`
-        font-size: 1rem;
-
-`
 
 const DetailsDiv = styled.div`
         visibility: hidden;
