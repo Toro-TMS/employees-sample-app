@@ -20,5 +20,7 @@ export default function Delete(props) {
         <Button onClick={removeBackend}>
             🗑
         </Button>
+        
     )
 }
+
