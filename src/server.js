@@ -5,9 +5,7 @@ import avatar from "./avatar.png";
 export function makeServer({ environment = "test" } = {}) {
   let server = createServer({
     environment,
-    models: {
-      employee: Model,
-    },
+    models: {employee: Model,},
     seeds(server) {
       for (let i = 0; i < 10; i++) {
         server.create("employee", {
