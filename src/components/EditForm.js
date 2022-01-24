@@ -16,7 +16,7 @@ export default function EditForm({closeDialog, currentEmployee}) {
         })
         .then((response) => response.json())
         .then((response) => console.log(response))
-        .catch((error) => console.log(error))
+        .catch((error) => console.log(error, "👹"))
     }
     return(
         <div>
